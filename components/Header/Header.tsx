@@ -2,10 +2,22 @@ import { useState, useEffect, useRef, useCallback} from "react";
 import styled from "styled-components";
 import Logo from "./component/Logo";
 
-const FixedBlock = styled.div`
+const TransparentBlock = styled.div`
+width:100%;
+height:130px;
+
+z-index:0;
+`
+    
+
+
+const FixedBlock = styled.header`
 position: fixed;
 width: 100%;
 box-sizing: border-box;
+display:block;
+
+z-index: 99;
 
 &:hover{
     .lower_header{
@@ -30,7 +42,8 @@ box-sizing: border-box;
 .lower_header{
     position: absolute;
     width:100%;
-    z-index:0;
+    z-index:1;
+    background-color:#fff;
     
     height:50px;
     border-bottom: 1px solid #ededed;
@@ -227,6 +240,7 @@ const Header = () => {
     const defaultNavItems = navDat.community;
 
     return (
+        <>
         <FixedBlock >
         <HeaderBlock>
             <div className="upper_header">
@@ -319,6 +333,10 @@ const Header = () => {
             </div>
         </div>
         </FixedBlock>
+        <TransparentBlock>
+
+        </TransparentBlock>
+        </>
     )
 }
 

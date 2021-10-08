@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "../components/Header";
+import MainAd from "../components/MainAd";
 
 
 
@@ -15,6 +16,7 @@ const index = () => {
     return (
     <IndexBlock>
         <Header />
+        <MainAd />
     </IndexBlock>)
 }
 
