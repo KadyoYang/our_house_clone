@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "../components/Header";
 import MainAd from "../components/MainAd";
+import ResponsiveTest from "../components/ReponsiveTest/ResponsiveTest";
 import TestA from "../components/TestA/TestA";
 import TestB from "../components/TestB/TestB";
 
@@ -21,6 +22,7 @@ const index = () => {
         <MainAd />
         <TestA />
         <TestB />
+        <ResponsiveTest />
     </IndexBlock>)
 }
 
