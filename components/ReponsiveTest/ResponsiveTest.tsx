@@ -4,6 +4,7 @@ import media from "../../lib/style/metia";
 
 
 const ResponsiveTestBlock = styled.div`
+width:900px;
 font-size: 50px;
 
 ${media.xxlarge}{
@@ -23,6 +24,7 @@ const ResponsiveTest = () => {
         setWidth(window.innerWidth);
     }
     useEffect(()=>{
+        setWidth(window.innerWidth);
         window.addEventListener("resize", updateWidth);
 
         return () => {window.removeEventListener, updateWidth}
